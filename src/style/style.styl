@@ -1,0 +1,123 @@
+@import "nib"
+@import "typographic"
+
+normalize-base()
+normalize-html5()
+typographic()
+
+body
+  width: 100%;
+  height: 100%;
+
+//Navigation
+.appBar
+  background: linear-gradient(top, #2c3e50, black)!important;
+
+
+.brand
+  color: white;
+  font-size:25px;
+  margin-top: 15px
+  cursor default
+
+.BlockMenu
+  height: 100%;
+
+
+.blockMenu_ul
+  display: flex;
+  padding: 0;
+  margin: 0;
+  left:50px;
+  max-width: 600px;
+
+
+.menuItem
+  font-size:15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: auto;
+  color:lightgray;
+
+.link
+  text-decoration: none
+  color: lightgray
+  &:hover
+    color:  white;
+    cursor: pointer;
+
+.brandBlock
+  display flex
+
+.brandBlock > div img
+  flex-flow column wrap
+  justify-content center
+  align-items: center
+
+//RegistrationForm
+.checkBoxLang
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-right:10px;
+
+
+.App-logo
+  animation: App-logo-spin infinite 20s linear;
+  height: 60px;
+  bottom: 0;
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+//HomePage
+.homePage > *
+  flex-flow row wrap
+  justify-content center
+  align-items center
+  color white
+  text-align: center
+  font-family $futura
+  cursor default
+
+.countItem
+  flex-flow row wrap
+  justify-content center
+  align-items center
+  color white
+  text-align: center
+  font-family $futura
+  padding: 40px
+  cursor default
+  &>*
+    color white
+    cursor default
+
+//Footer
+.footer > ul
+  width: 100%
+  padding: 0
+  margin: 0
+
+.footerItem
+  //flex-flow row no-wrap
+  //justify-content center
+  //align-items center
+  //align-content center
+  list-style none
+  display inline-block
+  padding: 10px
+  width: 32.07%
+  background linear-gradient(top, #2c3e50, black);
+  color white
+  font-size: 14px
+  text-align: center
+
+.gitHubLink
+  text-decoration: none
+  color #16a085
