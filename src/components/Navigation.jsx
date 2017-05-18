@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
-import DialogSignIn from './DialogSignIn'
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import DialogSignIn from "./DialogSignIn";
 
-import logo from '../img/logo.svg'
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import Toggle from 'material-ui/Toggle';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import logo from "../img/logo.svg";
+import AppBar from "material-ui/AppBar";
+import IconButton from "material-ui/IconButton";
+import IconMenu from "material-ui/IconMenu";
+import MenuItem from "material-ui/MenuItem";
+import FlatButton from "material-ui/FlatButton";
+import Toggle from "material-ui/Toggle";
+import MoreVertIcon from "material-ui/svg-icons/navigation/more-vert";
 
 class Login extends Component {
     render() {
@@ -71,10 +71,11 @@ const menu = [
         link: '/help'
     },
     {
-        title: 'Контакти',
+        title: 'Про нас',
         link: '/about'
     }
 ];
+
 class Navigation extends Component {
     state = {
         logged: false,
@@ -103,7 +104,11 @@ class Navigation extends Component {
                 <ul className="blockMenu_ul">
                     {item.map((item, key) => {
                     return (
-                        <li className="menuItem" key={key}><Link className="link" to={item.link}>{item.title}</Link></li>
+                        <li className="menuItem" key={key}>
+                            <Link className="link" to={item.link}>
+                                {item.title}
+                            </Link>
+                        </li>
                     )
                 })}
                 <li className="menuItem">

@@ -446,11 +446,13 @@ body {
   margin: auto;
   color: #d3d3d3;
 }
-.link {
+.link,
+link > * {
   text-decoration: none;
   color: #d3d3d3;
 }
-.link:hover {
+.link:hover,
+link > *:hover {
   color: #fff;
   cursor: pointer;
 }
@@ -576,6 +578,10 @@ body {
 .countItem>* {
   color: #fff;
   cursor: default;
+}
+.about {
+  padding: 20px;
+  background: #ecf0f1;
 }
 .footer > ul {
   width: 100%;
