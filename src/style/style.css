@@ -394,6 +394,9 @@ body {
   width: 100%;
   height: 100%;
 }
+a {
+  text-decoration: none;
+}
 .appBar {
   background: -webkit-linear-gradient(top, #2c3e50, #000) !important;
   background: -moz-linear-gradient(top, #2c3e50, #000) !important;
@@ -580,7 +583,9 @@ link > *:hover {
   cursor: default;
 }
 .about {
-  padding: 20px;
+  background: #ecf0f1;
+}
+.helpBlock {
   background: #ecf0f1;
 }
 .footer > ul {

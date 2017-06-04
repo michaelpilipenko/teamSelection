@@ -41,7 +41,7 @@ const Logged = (props) => (
         anchorOrigin={{horizontal: 'right', vertical: 'top'}}
     >
         <MenuItem primaryText="Профiль" />
-        <MenuItem primaryText="Допомога" />
+        <Link className='link' to='/help'><MenuItem primaryText="Допомога" /></Link>
         <MenuItem primaryText="Вихiд" />
     </IconMenu>
 );
