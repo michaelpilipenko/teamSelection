@@ -97,15 +97,6 @@ const CheckboxSimple = () => (
                     labelPosition="left"
                 />
             </div>
-            <div>
-                <Field
-                    name="c++"
-                    component={Checkbox}
-                    className="checkBoxLang"
-                    label="С++"
-                    labelPosition="left"
-                />
-            </div>
         </div>
     </div>
 );
@@ -197,6 +188,20 @@ class RegistrationForm extends Component {
                             floatingLabelText="Повторiть пароль"
                             type="password"
                             validation={[required, password]}
+                        />
+                        <Field
+                            name="country"
+                            component={TextField}
+                            hintText="Україна"
+                            floatingLabelText="Країна проживання"
+                            validation={required}
+                        />
+                        <Field
+                            name="city"
+                            component={TextField}
+                            hintText="Київ"
+                            floatingLabelText="Місто проживання"
+                            validation={required}
                         />
                         <RadioButtonSimple />
                         <CheckboxSimple />

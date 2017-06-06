@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
+import React, {Component} from "react";
 
-import Paper from 'material-ui/Paper';
-import Avatar from 'material-ui/Avatar';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import Img from '../../img/2.jpg'
+import Paper from "material-ui/Paper";
+import Avatar from "material-ui/Avatar";
+import TextField from "material-ui/TextField";
+import RaisedButton from "material-ui/RaisedButton";
+import Img from "../../img/2.jpg";
 
 const style = {
   paper: {
     float: 'left',
     margin: '16px 32px 16px 0',
+    width: '65%',
+    textAlign: 'center',
   },
   rightIcon: {
     textAlign: 'center',

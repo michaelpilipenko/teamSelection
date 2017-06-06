@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from "react";
 
 import Paper from "material-ui/Paper";
-import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import TextField from "material-ui/TextField";
+import FlatButton from "material-ui/FlatButton";
 
 class Help extends Component {
     render(){
@@ -14,9 +14,10 @@ class Help extends Component {
                     <TextField
                         style={{width:'700px'}}
                         name="username"
-                        hintText="Вкажiть iм`я"
-                        floatingLabelText="Михайло Грушевський"
+                        hintText="Михайло Грушевський"
+                        floatingLabelText="Вкажiть iм`я"
                     />
+                    <br/>
                     <TextField
                         style={{width:'700px'}}
                         name="helpEmail"

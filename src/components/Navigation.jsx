@@ -8,7 +8,6 @@ import IconButton from "material-ui/IconButton";
 import IconMenu from "material-ui/IconMenu";
 import MenuItem from "material-ui/MenuItem";
 import FlatButton from "material-ui/FlatButton";
-import Toggle from "material-ui/Toggle";
 import MoreVertIcon from "material-ui/svg-icons/navigation/more-vert";
 
 class Login extends Component {
@@ -33,16 +32,15 @@ class Login extends Component {
 
 const Logged = (props) => (
     <IconMenu
-        {...props}
         iconButtonElement={
             <IconButton><MoreVertIcon /></IconButton>
         }
         targetOrigin={{horizontal: 'right', vertical: 'top'}}
         anchorOrigin={{horizontal: 'right', vertical: 'top'}}
     >
-        <MenuItem primaryText="Профiль" />
+        <Link  to="/profile/userinfo"><MenuItem primaryText="Профiль" /></Link>
         <Link className='link' to='/help'><MenuItem primaryText="Допомога" /></Link>
-        <MenuItem primaryText="Вихiд" />
+        <MenuItem primaryText="Вихiд" onTouchTap={props.onHandleClick}/>
     </IconMenu>
 );
 
@@ -63,8 +61,8 @@ const menu = [
         link: '/people'
     },
     {
-        title: 'Команди',
-        link: '/teams'
+        title: 'Проекти',
+        link: '/projects'
     },
     {
         title: 'Допомога',
@@ -78,7 +76,7 @@ const menu = [
 
 class Navigation extends Component {
     state = {
-        logged: false,
+        logged: true,
         isOpen: false
     };
 
@@ -98,6 +96,10 @@ class Navigation extends Component {
         this.setState({logged: logged});
     };
 
+    handleLoggedOf = () => {
+        this.setState({logged: false});
+    };
+
     menuItem = item => {
         return (
             <div className="blockMenu">
@@ -111,15 +113,6 @@ class Navigation extends Component {
                         </li>
                     )
                 })}
-                <li className="menuItem">
-                    <Toggle
-                        label="Logged"
-                        defaultToggled={false}
-                        onToggle={this.handleChange}
-                        labelPosition="left"
-                        style={{margin: 20, width: 100}}
-                    />
-                </li>
                 </ul>
             </div>
         )
@@ -131,7 +124,7 @@ class Navigation extends Component {
                     className="appBar"
                     iconElementLeft={<Brand/>}
                     title={this.menuItem(menu)}
-                    iconElementRight={this.state.logged ? <Logged /> : <Login onTouchTap={this.handleOpenDialog} />}
+                    iconElementRight={this.state.logged ? <Logged onHandleClick={this.handleLoggedOf}/> : <Login onTouchTap={this.handleOpenDialog} />}
                     iconStyleLeft={{marginTop: 0, marginLeft: 0, marginRight: 0}}
                 />
                 <DialogSignIn

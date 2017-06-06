@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, {Component} from "react";
 
 
-import TextField from 'material-ui/TextField';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-import Divider from 'material-ui/Divider';
-import Checkbox from 'material-ui/Checkbox';
-import Paper from 'material-ui/Paper';
-import DatePicker from 'material-ui/DatePicker';
-import RaisedButton from 'material-ui/RaisedButton';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import TextField from "material-ui/TextField";
+import {RadioButton, RadioButtonGroup} from "material-ui/RadioButton";
+import Divider from "material-ui/Divider";
+import Checkbox from "material-ui/Checkbox";
+import Paper from "material-ui/Paper";
+import DatePicker from "material-ui/DatePicker";
+import RaisedButton from "material-ui/RaisedButton";
+import SelectField from "material-ui/SelectField";
+import MenuItem from "material-ui/MenuItem";
 
 const style = {
     paper: {
@@ -46,6 +46,7 @@ const CheckboxSimple = () => (
         <div className="checkBoxBlock" style={style.checkBox}>
             <div>
                 <Checkbox
+                    name="csharp"
                     className="checkBoxLang"
                     label="С#"
                     labelPosition="left"
@@ -53,6 +54,7 @@ const CheckboxSimple = () => (
             </div>
             <div>
                 <Checkbox
+                    name="ruby"
                     className="checkBoxLang"
                     label="Ruby"
                     labelPosition="left"
@@ -60,6 +62,7 @@ const CheckboxSimple = () => (
             </div>
             <div>
                 <Checkbox
+                    name="java"
                     className="checkBoxLang"
                     label="Java"
                     labelPosition="left"
@@ -67,6 +70,7 @@ const CheckboxSimple = () => (
             </div>
             <div>
                 <Checkbox
+                    name="python"
                     className="checkBoxLang"
                     label="Python"
                     labelPosition="left"
@@ -74,6 +78,7 @@ const CheckboxSimple = () => (
             </div>
             <div>
                 <Checkbox
+                    name="php"
                     className="checkBoxLang"
                     label="PHP"
                     labelPosition="left"
@@ -81,6 +86,7 @@ const CheckboxSimple = () => (
             </div>
             <div>
                 <Checkbox
+                    name="javaScript"
                     className="checkBoxLang"
                     label="JavaScript"
                     labelPosition="left"
@@ -88,15 +94,9 @@ const CheckboxSimple = () => (
             </div>
             <div>
                 <Checkbox
+                    name="swift"
                     className="checkBoxLang"
                     label="Swift"
-                    labelPosition="left"
-                />
-            </div>
-            <div>
-                <Checkbox
-                    className="checkBoxLang"
-                    label="С++"
                     labelPosition="left"
                 />
             </div>
@@ -151,18 +151,21 @@ class RegistrationForm extends Component {
                             <h4 style={{textAlign: 'center'}}>Введiть будь-ласка свої данi</h4>
                             <Divider />
                             <TextField
+                                name="userName"
                                 hintText="Михайло Грушевський"
                                 floatingLabelText="I`мя"
                                 type="text"
                             />
                             <br/>
                             <TextField
+                                name="userEmail"
                                 hintText="you@example@org"
                                 floatingLabelText="E-mail"
                                 type="email"
                             />
                             <Divider/>
                             <TextField
+                                name="userPassword"
                                 hintText="******"
                                 floatingLabelText="Пароль"
                                 type="password"
@@ -173,6 +176,19 @@ class RegistrationForm extends Component {
                                 floatingLabelText="Повторiть пароль"
                                 type="password"
                             />
+                            <br/>
+                            <TextField
+                                name="userCountry"
+                                hintText="Україна"
+                                floatingLabelText="Країна проживання"
+                            />
+                            <br/>
+                            <TextField
+                                name="userCity"
+                                hintText="Київ"
+                                floatingLabelText="Місто проживання"
+                            />
+                            <br/>
                             <RadioButtonSimple />
                             <CheckboxSimple />
                             <br/>
