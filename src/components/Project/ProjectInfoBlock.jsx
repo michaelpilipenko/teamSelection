@@ -36,7 +36,7 @@ class ProjectInfoBlock extends Component{
                 <div style={{color:'#1E88E5',fontSize:'12px',textAlign:'left', paddingLeft: '15px'}}>
                     Автор: {this.props.authName}
                 </div>
-                <RaisedButton label="Хочу в команду!" primary style={{bottom: 100}}/>
+                <RaisedButton label="Хочу в команду!"  disabled={!this.props.user} primary style={{bottom: 100}}/>
             </Paper>
         );
     }
@@ -49,6 +49,7 @@ ProjectInfoBlock.propTypes = {
     need: PropTypes.string.isRequired,
     authName: PropTypes.string.isRequired,
     step: PropTypes.string.isRequired,
+    user: PropTypes.bool.isRequired,
 };
 
 export default ProjectInfoBlock;
