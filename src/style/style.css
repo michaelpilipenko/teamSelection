@@ -611,6 +611,14 @@ footer > ul {
   text-decoration: none;
   color: #16a085;
 }
+.descriptionBlock {
+  padding-left: 15px;
+  font-size: 12px;
+  overflow: hidden;
+  height: 80px;
+  text-align: left;
+  color: #212121;
+}
 @-moz-keyframes App-logo-spin {
   from {
     -webkit-transform: rotate(0deg);

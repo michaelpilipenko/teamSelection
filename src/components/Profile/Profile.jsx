@@ -24,8 +24,8 @@ class Profile extends Component {
     return(
       <div>
         <Paper style={style.paper}>
-          <Avatar src={Img} size='300'/>
-          <label for="fileInput">
+          <Avatar src={Img} size={300}/>
+          <label htmlFor="fileInput">
             <span>Змінити аватар:</span><br/>
             <input id='fileInput' type="file"/>
           </label><br />
